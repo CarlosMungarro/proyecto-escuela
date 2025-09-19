@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body{
- background: #22C1C3;
+background: #22C1C3;
 background: radial-gradient(circle, rgba(34, 193, 195, 1) 6%, rgba(253, 187, 45, 1) 100%);
 background-image: url("/proyecto-escuela/pagina/imagenes/backG.jpg");
  font-family: Arial, sans-serif; margin: 20px; }
@@ -11,3 +11,36 @@ background-image: url("/proyecto-escuela/pagina/imagenes/backG.jpg");
 
 }
   
+#menuBotones{
+  
+  display: flex;
+  justify-content: center;
+}
+
+#GestionarAlumnos{
+
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ font-family: inherit;
+ font-size: 15px;
+-webkit-box-shadow: 0 0 0 2px #1db5b5 0 0.625em 0 0 #1db5b5;
+ box-shadow: 0 0 0 2px #1db5b5, 0 0.625em 0 0 #1db5b5;
+ -webkit-transform: translate3d(0, 0.75em, -1em);
+ transform: translate3d(0, 0.75em, -1em);
+ transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+#GestionarAlumnos:hover{
+  background: #a5c0d3;
+ -webkit-transform: translate(0, 0.25em);
+ transform: translate(0, 0.25em);
+}
+
+h1{
+
+    text-align: center;
+}
