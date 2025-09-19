@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto Escuela</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .menu button, .submenu button { margin: 5px; padding: 10px; }
+    .section, .subsection { display: none; margin-top: 20px; }
+    .active { display: block; }
+  </style>
+</head>
+<body>
+  <h1>Proyecto Escuela</h1>
+
+  <!-- Menú principal -->
+  <div class="menu">
+    <button onclick="mostrarSeccion('alumnos')">Gestionar alumnos</button>
+    <button onclick="mostrarSeccion('carreras')">Gestionar carreras</button>
+    <button onclick="mostrarSeccion('asignar')">Asignar alumno a carrera</button>
+    <button onclick="mostrarSeccion('listarAlumnos')">Listar alumnos</button>
+    <button onclick="mostrarSeccion('listarCarreras')">Listar carreras</button>
+  </div>
+
+  <!-- Sección: alumnos -->
+  <div id="alumnos" class="section">
+    <h2>Gestionar alumnos</h2>
+    <div class="submenu">
+      <button onclick="mostrarSubseccion('alumnosAgregar')">Agregar</button>
+      <button onclick="mostrarSubseccion('alumnosActualizar')">Actualizar</button>
+      <button onclick="mostrarSubseccion('alumnosEliminar')">Eliminar</button>
+    </div>
+
+    <!-- Subopciones -->
+    <div id="alumnosAgregar" class="subsection">
+      <h3>Agregar alumno</h3>
+      <input type="text" id="alumnoNombre" placeholder="Nombre del alumno">
+      <button onclick="agregarAlumno()">Agregar</button>
+      <div id="alumnosResultado"></div>
+    </div>
+
+    <div id="alumnosActualizar" class="subsection">
+      <h3>Actualizar alumno</h3>
+      <input type="number" id="alumnoIdUpdate" placeholder="ID Alumno">
+      <input type="text" id="alumnoNombreUpdate" placeholder="Nuevo nombre">
+      <button onclick="actualizarAlumno()">Actualizar</button>
+      <div id="alumnosResultado"></div>
+    </div>
+
+    <div id="alumnosEliminar" class="subsection">
+      <h3>Eliminar alumno</h3>
+      <input type="number" id="alumnoIdDelete" placeholder="ID Alumno">
+      <button onclick="eliminarAlumno()">Eliminar</button>
+      <div id="alumnosResultado"></div>
+    </div>
+  </div>
+
+  <!-- Sección: carreras -->
+  <div id="carreras" class="section">
+    <h2>Gestionar carreras</h2>
+    <div class="submenu">
+      <button onclick="mostrarSubseccion('carrerasAgregar')">Agregar</button>
+      <button onclick="mostrarSubseccion('carrerasActualizar')">Actualizar</button>
+      <button onclick="mostrarSubseccion('carrerasEliminar')">Eliminar</button>
+    </div>
+
+    <!-- Subopciones -->
+    <div id="carrerasAgregar" class="subsection">
+      <h3>Agregar carrera</h3>
+      <input type="text" id="carreraNombre" placeholder="Nombre de la carrera">
+      <button onclick="agregarCarrera()">Agregar</button>
+      <div id="carrerasResultado"></div>
+    </div>
+
+    <div id="carrerasActualizar" class="subsection">
+      <h3>Actualizar carrera</h3>
+      <input type="number" id="carreraIdUpdate" placeholder="ID Carrera">
+      <input type="text" id="carreraNombreUpdate" placeholder="Nuevo nombre">
+      <button onclick="actualizarCarrera()">Actualizar</button>
+      <div id="carrerasResultado"></div>
+    </div>
+
+    <div id="carrerasEliminar" class="subsection">
+      <h3>Eliminar carrera</h3>
+      <input type="number" id="carreraIdDelete" placeholder="ID Carrera">
+      <button onclick="eliminarCarrera()">Eliminar</button>
+      <div id="carrerasResultado"></div>
+    </div>
+  </div>
+
+  <!-- Sección: asignación -->
+  <div id="asignar" class="section">
+    <h2>Asignar alumno a carrera</h2>
+    <input type="number" id="alumnoId" placeholder="ID Alumno">
+    <input type="number" id="carreraId" placeholder="ID Carrera">
+    <button onclick="asignarAlumnoCarrera()">Asignar</button>
+    <div id="asignarResultado"></div>
+  </div>
+
+  <!-- Sección: listar alumnos -->
+  <div id="listarAlumnos" class="section">
+    <h2>Lista de alumnos</h2>
+    <button onclick="listarAlumnos()">Actualizar lista</button>
+    <ul id="listaAlumnos"></ul>
+  </div>
+
+  <!-- Sección: listar carreras -->
+  <div id="listarCarreras" class="section">
+    <h2>Lista de carreras</h2>
+    <button onclick="listarCarreras()">Actualizar lista</button>
+    <ul id="listaCarreras"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
