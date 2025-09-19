@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+body{
+ background: #22C1C3;
+background: radial-gradient(circle, rgba(34, 193, 195, 1) 6%, rgba(253, 187, 45, 1) 100%);
+background-image: url("/proyecto-escuela/pagina/imagenes/backG.jpg");
+ font-family: Arial, sans-serif; margin: 20px; }
+    .menu button, .submenu button { margin: 5px; padding: 10px; }
+    .section, .subsection { display: none; margin-top: 20px; }
+    .active { display: block;
+
+}
+  
